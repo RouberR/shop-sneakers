@@ -1,32 +1,29 @@
 import React from "react";
+import Card from "../components/Card/Card";
 const Home = ({
-  cartItems,
   items,
   searchValue,
   onAddToCart,
-  Card,
   onChangeSearchInput,
   setSearchValue,
   onAddToFavorites,
   isLoading,
 }) => {
-
- 
-
-
-      const renderItems = () => {
-        const filtredItems = items.filter((item) => item.title.toLowerCase().includes(searchValue.toLowerCase()))
-        return (
-          isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
-            <Card
-              key={index}
-              
-              onPlus={(obj) => onAddToCart(obj)}
-              loading={isLoading}
-              {...item}
-            />
-          ));
-      };
+  const renderItems = () => {
+    const filtredItems = items.filter((item) =>
+      item.title.toLowerCase().includes(searchValue.toLowerCase())
+    );  
+    return (isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
+    
+      <Card
+        key={index}
+        onFavorite={(obj) => onAddToFavorites(obj)}
+        onPlus={(obj) => onAddToCart(obj)}
+        loading={isLoading}
+        {...item}
+      />
+    ));
+  };
 
   return (
     <div className="content p-40">
@@ -52,6 +49,7 @@ const Home = ({
       </div>
 
       <div className="d-flex flex-wrap">{renderItems()}</div>
+      
     </div>
   );
 };
