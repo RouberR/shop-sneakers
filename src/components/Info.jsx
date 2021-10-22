@@ -9,7 +9,7 @@ export const Info = ({ title, image, description }) => {
       <h1>{title}</h1>
       <p>{description}</p>
       <button onClick={() => setCartOpened(false)} className="greanButton">
-        <img src="/img/arrow_back.svg" alt="arrow" />
+        <img src="img/arrow_back.svg" alt="arrow" />
         Вернуться назад
       </button>
     </div>

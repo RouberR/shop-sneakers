@@ -47,7 +47,7 @@ const Drawer = ({ onClose, items = [], onRemove }) => {
           <img
             onClick={onClose}
             className="cu-p"
-            src="/img/bt_remove.svg"
+            src="img/bt_remove.svg"
             alt="Close"
           />
         </h2>
@@ -66,7 +66,7 @@ const Drawer = ({ onClose, items = [], onRemove }) => {
                   <img
                     onClick={() => onRemove(obj.id)}
                     className="removeBtn"
-                    src="/img/bt_remove.svg"
+                    src="img/bt_remove.svg"
                     alt="Remove"
                   />
                 </div>
@@ -89,14 +89,14 @@ const Drawer = ({ onClose, items = [], onRemove }) => {
               </ul>
               <button disabled={isLoading} onClick={onClickOder} className="greanButton">
                 Оформить заказ
-                <img src="/img/arrow.svg" alt="arrow" />
+                <img src="img/arrow.svg" alt="arrow" />
               </button>
             </div>
           </div>
         ) : (
           <Info
             title={isOderComplete ? "Заказ оформлен!" : "Корзина пустая"}
-            image={isOderComplete ? "/img/oder.png" : "/img/box.png"}
+            image={isOderComplete ? "img/oder.png" : "img/box.png"}
             description={
               isOderComplete
                 ? `Ваш заказ #${oderId} скоро будет передан курьерской доставке`

@@ -32,7 +32,7 @@ const Home = ({
           {searchValue ? `Поиск по запросу: "${searchValue}"` : `Все кросовки`}
         </h1>
         <div className="search-block d-flex">
-          <img src="/img/search.svg" alt="Search" />
+          <img src="img/search.svg" alt="Search" />
           <input
             onChange={onChangeSearchInput}
             value={searchValue}
@@ -41,7 +41,7 @@ const Home = ({
           {searchValue && (
             <img
               onClick={() => setSearchValue("")}
-              src="/img/clear.svg"
+              src="img/clear.svg"
               alt="Clear"
             />
           )}
