@@ -84,7 +84,7 @@ const Drawer = ({ onClose, items = [], onRemove }) => {
                 <li>
                   <span>Налог 5%</span>
                   <div></div>
-                  <b>{(totaPrice / 100) * 5}$</b>
+                  <b>{Math.round((totaPrice / 100) * 5)}$</b>
                 </li>
               </ul>
               <button disabled={isLoading} onClick={onClickOder} className="greanButton">
